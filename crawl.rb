@@ -4,9 +4,11 @@ require 'anemone'
 require 'json'
 require 'csv'
 
-domains = JSON.parse(File.read('./domains.json'));
+domains = JSON.parse(File.read('./domains.json'))
 
 results = []
+
+lipsum_words = JSON.parse(File.read('./lib/lipsum.json'))
 
 domains.each do |domain|
 
@@ -15,7 +17,11 @@ domains.each do |domain|
 	  anemone.on_every_page do |page|
 	  	# puts "############################"
 	      # puts page.response_time.to_s+'|'+page.code.to_s+'|'+page.url.to_s
-	      lipsum = !!(page.body =~ /Lorem|ipsum|dolor|amet/)
+	      lipsum = !!(page.body =~ Regexp.union(lipsum_words))
+
+	      # puts lipsum
+
+	      # lorem_collection.each { |word| page.body.include? word }
 
 	      puts page.url.to_s
 
