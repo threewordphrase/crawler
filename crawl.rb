@@ -1,13 +1,6 @@
-# require 'mechanize'
-# require 'rubygems'
-# require 'wombat'
 
-
-###########################
-# drush @lumicorelocal uli
 
 require 'anemone'
-require 'nokogiri'
 require 'json'
 require 'csv'
 
