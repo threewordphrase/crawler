@@ -1,4 +1,6 @@
-
+# Todo: 
+# check for links pointing to blacklisted domains (specified in domain json?)
+# check for img with src pointing to blacklisted domains
 
 require 'anemone'
 require 'json'
