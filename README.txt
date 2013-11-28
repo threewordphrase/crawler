@@ -1,5 +1,7 @@
 Pretty straightforward...
 
+Gems listed in Gemfile, will install with $ bundle install (usual caveats concerning gem installation apply)
+
 1) Add the domain(s) you want to check to domains.json.
 
 2) $ ruby crawl.rb
